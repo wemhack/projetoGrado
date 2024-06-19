@@ -1,15 +1,15 @@
 <?php
 
+// Incluir archivo maestro app.php
+require 'includes/app.php';
+incluirTemplate('header');
+incluirTemplate('sbar');
+
 // Verificar si el usuario esta autenticado
 estadoAutenticado();
 
 // Id de la entidad asociada a la sesión
 $id = $_SESSION['entidad'];
-
-// Incluir archivo maestro app.php
-require 'includes/app.php';
-incluirTemplate('header');
-incluirTemplate('sbar');
 
 // Crear instancias de objetos
 $datosBasicos = new Datos_Basicos();
