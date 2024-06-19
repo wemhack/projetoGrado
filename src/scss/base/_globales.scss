@@ -1,0 +1,91 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    position: fixed;
+    top: 5.8rem;
+    right: .5rem;
+    width: calc(100% - 25.5rem);
+    height: 90%;
+    overflow: auto;
+    border-top: solid 1px $gris-claro;
+    border-left: solid 1px $gris-claro;
+    transition: all .5s ease;
+    z-index: -1;
+
+    @include tablet {
+        width: calc(100% - 7.5rem);
+    }
+    
+    &.collapse {
+        width: calc(100% - 7.5rem);
+    }
+}
+
+.boton-azul {
+    @include boton ($azul-brillante);
+    @include phone {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.boton-blanco {
+    background-color: $blanco-humo;
+    width: auto;
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid $azul-brillante;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: $negro;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    &:hover {
+      border-color: $blanco;
+      border-width: 0.2rem;
+      transition: 0.4s ease;
+      background-color: lighten($color: $blanco, $amount: 5);
+    }
+}
+
+.boton-amarillo {
+    background-color: $blanco-humo;
+    width: auto;
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid $azul-brillante;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: $negro;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+      border-color: $blanco;
+      border-width: 0.2rem;
+      transition: 0.4s ease;
+      background-color: lighten($color: $blanco, $amount: 5);
+    }
+}

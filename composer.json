@@ -1,0 +1,16 @@
+{
+    "name": "lenovo/proyecto",
+    "description": "Autoload para proyecto de grado universitario",
+    "autoload": {
+        "psr-4": {
+            "": "./clases"
+        }
+    },
+    "authors": [
+        {
+            "name": "wemhack",
+            "email": "wemosquera@valledelcauca.gov.co"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,12 @@
+.layer-ayuda {
+    box-sizing: border-box;
+    padding: 0 1rem;
+    .layer-ayuda_title{
+        text-transform: uppercase;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .layer-ayuda_content p {
+        margin-bottom: 2rem;
+    }
+}

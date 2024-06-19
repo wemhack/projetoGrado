@@ -1,0 +1,44 @@
+.layer-objetivos {
+  box-sizing: border-box;
+  padding: 0 0.6rem;
+
+  .layer-objetivos_title {
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    caption {
+      padding: 1rem;
+      font-weight: 550;
+    }
+    th {
+      background-color: $azul-brillante;
+      color: $blanco;
+      font-weight: 550;
+      img {
+        width: 4.5rem;
+      }
+    }
+
+    td {
+      padding-left: 1rem;
+      width: 33%;
+    }
+
+    @include phone {
+      font-size: 1.5rem;
+    }
+  }
+  table,
+  th,
+  td {
+    border: solid 1px $gris-claro;
+    padding: 0.3rem;
+  }
+}

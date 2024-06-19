@@ -1,0 +1,40 @@
+.nbar {
+    box-sizing: border-box;
+    position: fixed;
+    right: .5rem;
+    height: 5rem;
+    width: calc(100% - 25.5rem);
+    transition: all .5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: $azul-brillante;
+    line-height: 2.4rem;
+    span {
+        color: $blanco;
+        font-weight: 550;
+        font-size: 1.8rem;
+    }
+    @include tablet {
+        width: calc(100% - 7.5rem);
+        font-size: 1.7rem;
+        line-height: normal;
+    }
+
+    @include phone {
+        line-height: 1.6rem;
+    }
+
+    .nbar_user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1rem;
+    }
+}
+
+.nbar.collapse {
+    width: calc(100% - 7.5rem);
+}
+

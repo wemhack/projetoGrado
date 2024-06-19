@@ -1,0 +1,205 @@
+.layer-sActual {
+  height: 88%;
+}
+
+.sActual-text {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.3rem 0;
+}
+
+.matriz-dofa {
+  display: grid;
+  grid-template-columns: 5% 31% 31% 31%;
+  grid-template-rows: auto auto minmax(8em, auto) auto minmax(8em, auto) auto minmax(
+      8em,
+      auto
+    );
+  gap: 2px;
+  justify-content: center;
+  margin-top: 1rem;
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
+}
+
+.matriz-dofa > div {
+  border: solid 1px;
+}
+
+.factores-internos {
+  grid-row: 1/2;
+  grid-column: 2/5;
+  text-align: center;
+}
+
+.factores-externos {
+  grid-column: 1/2;
+  grid-row: 2/8;
+  text-align: center;
+  writing-mode: vertical-rl;
+  line-height: 1;
+}
+
+.planeacion-estrategica {
+  grid-row: 2/4;
+  grid-column: 2/3;
+  text-align: center;
+  line-height: 10;
+}
+
+.fortalezas {
+  grid-row: 2/3;
+  grid-column: 3/4;
+  text-align: center;
+  background-color: $azul-brillante;
+  font-weight: 500;
+  color: $blanco;
+}
+
+.card {
+  background-color: #FFFF00;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: $negro;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  max-width: 32%;
+  height: min-content;
+  position: relative;
+  form {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    input[type="image"] {
+      width: 2rem;
+    }
+  }
+  &:hover {
+    form {
+      display: block;
+    }
+  }
+}
+
+.box-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.fortalezas-card {
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+
+.debilidades {
+  grid-row: 2/3;
+  grid-column: 4/5;
+  text-align: center;
+  background-color: $azul-brillante;
+  font-weight: 500;
+  color: $blanco;
+}
+
+.debilidades-card {
+  grid-row: 3/4;
+  grid-column: 4/5;
+  text-align: center;
+}
+
+.oportunidades {
+  grid-row: 4/5;
+  grid-column: 2/3;
+  text-align: center;
+  background-color: $azul-brillante;
+  font-weight: 500;
+  color: $blanco;
+}
+
+.oportunidades-card {
+  grid-row: 5/6;
+  grid-column: 2/3;
+  text-align: center;
+}
+
+.amenazas {
+  grid-row: 6/7;
+  grid-column: 2/3;
+  text-align: center;
+  background-color: $azul-brillante;
+  font-weight: 500;
+  color: $blanco;
+}
+
+.amenazas-card {
+  grid-row: 7/8;
+  grid-column: 2/3;
+  text-align: center;
+}
+
+.enfoque-exito {
+  grid-row: 4/5;
+  grid-column: 3/4;
+  text-align: center;
+  background-color: $azul-brillante;
+  font-weight: 500;
+  color: $blanco;
+}
+
+.enfoque-exito-card {
+  grid-row: 5/6;
+  grid-column: 3/4;
+  text-align: center;
+}
+
+.enfoque-adaptacion {
+  grid-row: 4/5;
+  grid-column: 4/5;
+  text-align: center;
+  background-color: $azul-brillante;
+  font-weight: 500;
+  color: $blanco;
+}
+
+.enfoque-adaptacion-card {
+  grid-row: 5/6;
+  grid-column: 4/5;
+  text-align: center;
+}
+
+.enfoque-reaccion {
+  grid-row: 6/7;
+  grid-column: 3/4;
+  text-align: center;
+  background-color: $azul-brillante;
+  font-weight: 500;
+  color: $blanco;
+}
+
+.enfoque-reaccion-card {
+  grid-row: 7/8;
+  grid-column: 3/4;
+  text-align: center;
+}
+
+.enfoque-supervivencia {
+  grid-row: 6/7;
+  grid-column: 4/5;
+  text-align: center;
+  background-color: $azul-brillante;
+  font-weight: 500;
+  color: $blanco;
+}
+
+.enfoque-supervivencia-card {
+  grid-row: 7/8;
+  grid-column: 4/5;
+  text-align: center;
+}

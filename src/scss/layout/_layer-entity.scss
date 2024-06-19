@@ -1,0 +1,354 @@
+.layer-entity {
+  overflow-x: hidden;
+  // display: none;
+}
+
+.title {
+  display: flex;
+  text-transform: uppercase;
+  position: relative;
+  div {
+    width: 50%;
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: $azul-claro;
+    }
+    border-bottom: solid 1px $gris-claro;
+
+    @include tablet {
+      font-size: 1.7rem;
+      overflow: hidden;
+    }
+  }
+
+  :first-child {
+    border-right: solid 1px $gris-claro;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: $azul-brillante;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease;
+  }
+
+  &.move-title::before {
+    content: '';
+    left: 50%;
+  }
+}
+
+.entity-info {
+  left: 0;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.entity-info.move-entity {
+  left: -100%;
+}
+
+.conten-boton {
+  position: relative;
+}
+
+.datos-basicos {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 0 1rem 0;
+  table {
+    border-collapse: collapse;
+    caption {
+      padding: 2rem;
+      font-weight: 550;
+    }
+    th {
+      text-align: left;
+      width: 12rem;
+      background-color: $azul-brillante;
+      color: $blanco;
+      font-weight: 550;
+    }
+
+    @include phone {
+      font-size: 1.5rem;
+    }
+  }
+  table,
+  th,
+  td {
+    border: solid 1px $gris-claro;
+    padding: 0.3rem;
+  }
+}
+
+.caja-boton-blanco {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 1rem;
+  img {
+    width: 4rem;
+    padding: 0 0.5rem;
+  }
+}
+
+.horizonte-institucional {
+  width: 100%;
+  padding: 0 2rem 1rem 2rem;
+  box-sizing: border-box;
+  border-top: solid 1px $gris-claro;
+  border-bottom: solid 1px $gris-claro;
+  position: relative;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    caption {
+      padding: 2rem;
+      font-weight: 550;
+      text-transform: uppercase;
+    }
+    th {
+      text-align: left;
+      background-color: $azul-brillante;
+      color: $blanco;
+      font-weight: 550;
+    }
+  }
+  table,
+  th,
+  td {
+    border: solid 1px $gris-claro;
+    padding: 0.3rem;
+  }
+  td {
+    font-size: 1.4rem;
+  }
+}
+
+.info-negocio {
+  width: 100%;
+  padding: 0 2rem 1rem 2rem;
+  box-sizing: border-box;
+  border-bottom: solid 1px $gris-claro;
+  position: relative;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    caption {
+      padding: 2rem;
+      font-weight: 550;
+      text-transform: uppercase;
+    }
+    th {
+      text-align: left;
+      background-color: $azul-brillante;
+      color: $blanco;
+      font-weight: 550;
+    }
+  }
+  table,
+  th,
+  td {
+    border: solid 1px $gris-claro;
+    padding: 0.3rem;
+  }
+  td {
+    font-size: 1.4rem;
+  }
+}
+
+.contexto-institucional {
+  width: 100%;
+  padding: 0 2rem 1rem 2rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 5rem;
+  left: 100%;
+  transition: 0.5s ease;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    caption {
+      padding: 2rem;
+      font-weight: 550;
+      text-transform: uppercase;
+    }
+    th {
+      text-align: left;
+      background-color: $azul-brillante;
+      color: $blanco;
+      font-weight: 550;
+    }
+  }
+  table,
+  th,
+  td {
+    border: solid 1px $gris-claro;
+    padding: 0.3rem;
+  }
+  td {
+    font-size: 1.4rem;
+  }
+  &.move-entity {
+    left: 0;
+  }
+}
+
+.panel-institucional.collapse {
+  width: calc(100% - 7.5rem);
+}
+
+.dialog_form {
+  margin: auto;
+  padding: 1rem;
+  border: none;
+  background-color: $blanco;
+  border-radius: 0.5rem;
+  position: relative;
+  box-shadow: 0 0 0.8rem 0.3rem rgba(252, 252, 252, 0.589);
+
+  .boton-cerrar {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 3rem;
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 50%;
+    cursor: pointer;
+    color: $blanco;
+  }
+
+  select {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+  }
+
+  .dialog_form_input {
+    position: relative;
+    border-bottom: solid 2px silver;
+    margin: 1.5rem 0;
+    width: 35rem;
+
+    input {
+      width: 100%;
+      padding: 0 0.5rem;
+      height: 4rem;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 0.5rem;
+      color: $gris;
+      transform: translateY(-50%);
+      pointer-events: none;
+      transition: 0.3s;
+    }
+  }
+
+  .dialog_form_input input:focus ~ label, 
+  .dialog_form_input input:valid ~ label {
+    top: -5px;
+    color: $azul-brillante;
+    font-size: 1.3rem;
+  }
+
+  input[type="submit"] {
+    width: 35%;
+    height: 5rem;
+    border: 1px solid;
+    background-color: $azul-brillante;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    font-size: 2rem;
+    color: $blanco;
+    cursor: pointer;
+    outline: none;
+  }
+
+  input[type="submit"]:hover {
+    border-color: purple;
+    transition: 0.4s ease;
+    background-color: lighten($color: $azul-brillante, $amount: 5);
+  }
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.711);
+  }
+
+  &[open]::backdrop {
+    animation: backdrop-down 0.5s forwards;
+  }
+
+  &.cerrar::backdrop {
+    animation: backdrop-up 0.5s forwards;
+  }
+
+  &[open] {
+    animation: modal-down .5s forwards;
+  }
+  
+  &.cerrar {
+    animation: modal-up .5s forwards;
+  }
+} 
+
+@keyframes backdrop-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes backdrop-up {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-down {
+  0% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes modal-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,40 @@
+/** Media Queries **/
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin boton($bgColor) {
+  position: absolute;
+  background-color: $bgColor;
+  width: 15rem;
+  height: 3.8rem;
+  border: 1px solid;
+  border-radius: 0.4rem;
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: $blanco;
+  cursor: pointer;
+  line-height: 3.8rem;
+  text-align: center;
+  top: 1.4rem;
+  left: 1.4rem;
+  &:hover {
+    border-color: $azul-brillante;
+    transition: 0.4s ease;
+    background-color: lighten($color: $azul-brillante, $amount: 5);
+  }
+}

@@ -1,0 +1,140 @@
+.sbar {
+  width: 22rem;
+  height: 100%;
+  padding: 0 1.2rem;
+  position: fixed;
+  transition: all 0.5s ease;
+  top: 0;
+  border-right: solid 0.1rem $gris-claro;
+
+  @include tablet {
+    width: 4rem;
+  }
+}
+
+.sbar_head {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: solid 1px groove $gris-claro;
+  height: 3rem;
+
+  .sbar_head_text {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .sbar_head_flech {
+    position: absolute;
+    width: 2.5rem;
+    right: 0;
+    cursor: pointer;
+    transition: all 0.8s ease;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.sbar_main {
+  text-decoration: none;
+
+  .sbar_main_list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: solid 1px groove $gris-claro;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.sbar_main_list_item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  height: 3rem;
+  &:hover {
+    background-color: $azul-claro;
+  }
+
+  .sbar_main_list_item_icon {
+    width: 2.5rem;
+    justify-content: center;
+  }
+
+  .sbar_main_list_item_text {
+    text-transform: uppercase;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+    transition: all 0.5s ease;
+    color: $negro;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .sbar_main_list_item_tip {
+    position: absolute;
+    top: -2.1rem;
+    left: 6.4rem;
+    background-color: $azul-brillante;
+    color: $blanco;
+    font-weight: bold;
+    border: solid 2px white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.9rem;
+    font-size: 1.4rem;
+    transition: 0s;
+    opacity: 0;
+    display: none;
+    box-shadow: 0 0 5px 1px rgb(254, 254, 254);
+  }
+}
+
+.sbar.collapse {
+  width: 4rem;
+}
+
+.sbar.collapse .sbar_head_text,
+.sbar.collapse .sbar_main_list_item_text {
+  opacity: 0;
+  font-size: 0;
+}
+
+.sbar.collapse .sbar_main_list_item:hover .sbar_main_list_item_tip {
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+.sbar.collapse .sbar_main_list_item_tip {
+  display: block;
+  width: max-content;
+  pointer-events: none;
+}
+
+.sbar.collapse .sbar_head_flech {
+  width: 3rem;
+  transform: rotate(180deg);
+  right: 25%;
+}
