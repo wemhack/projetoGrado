@@ -17,9 +17,9 @@ function debuguear($variable)
 
 function estadoAutenticado()
 {
-    session_start();
+    $login = $_COOKIE["login"];
 
-    if (!$_SESSION['login']) {
+    if ($login == true) {
         header('Location: login.php');
     }
 }
