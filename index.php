@@ -11,7 +11,7 @@ error_reporting(0);
 estadoAutenticado();
 
 // Id de la entidad asociada a la sesión
-$id = $_SESSION['entidad'];
+$id = $_COOKIE['entidad'];
 
 // Crear instancias de objetos
 $datosBasicos = new Datos_Basicos();
