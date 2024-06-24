@@ -51,11 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($password == $usuario['password']) {
 
-                session_start();
-
-                $_SESSION['usuario'] = $usuario['username'];
-                $_SESSION['entidad'] = $usuario['idEntidad'];
-                $_SESSION['login'] = true;
+                setcookie("usuario", $usuario['username']);
+                setcookie("entidad", $usuario['idEntidad']);
+                setcookie("login", true);
 
                 header('Location: /index');
             } else {
