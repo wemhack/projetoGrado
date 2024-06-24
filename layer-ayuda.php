@@ -4,6 +4,8 @@ require 'includes/app.php';
 incluirTemplate('header');
 incluirTemplate('sbar');
 
+error_reporting(0);
+
 include 'includes/templates/nbar.php';
 
 ?>
