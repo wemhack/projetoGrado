@@ -20,7 +20,7 @@ function estadoAutenticado()
     $login = true;
 
     if ($login == true) {
-        header('Location: login.php');
+        header('Location: /login.php');
     }
 }
 
