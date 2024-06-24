@@ -5,7 +5,7 @@ require 'includes/app.php';
 incluirTemplate('header');
 incluirTemplate('sbar');
 
-error_reporting(0);
+// error_reporting(0);
 
 // Verificar si el usuario esta autenticado
 estadoAutenticado();
