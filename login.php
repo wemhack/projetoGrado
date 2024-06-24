@@ -16,6 +16,8 @@
 // Archivo maestro 
 require 'includes/app.php';
 
+error_reporting(0);
+
 // Conexión a la base de datos
 $db = conectarDB();
 
